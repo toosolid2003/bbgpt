@@ -1,0 +1,25 @@
+html    {
+    background-color: grey;
+    font-family: 'Lato','Arial','sans-serif';
+    box-sizing: border-box;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+h1  {
+    font-family: 'Wix Madefor Text','Arial';
+    font-size: 9em;
+    font-weight: 200;
+    color: white;
+    text-transform: uppercase;
+}
+
+ul  {
+    text-decoration: none;
+    text-transform: uppercase;
+    list-style: none;
+}
+
+li  {
+    display: inline;
+}
