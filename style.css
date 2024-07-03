@@ -1,25 +1,93 @@
 html    {
-    background-color: grey;
-    font-family: 'Lato','Arial','sans-serif';
+    font-family: 'work sans','Lato','Arial','sans-serif';
     box-sizing: border-box;
     font-size: 16px;
     font-weight: 400;
+    color: black;
+}
+
+body    {
+    margin: 0;
 }
 
 h1  {
-    font-family: 'Wix Madefor Text','Arial';
+    margin: 0;
+    padding: 0;
+    text-align: left;
     font-size: 9em;
-    font-weight: 200;
+    text-transform: uppercase;
+}
+
+h2  {
+    text-align: right;
+    padding-right: 3em;
+}
+
+h3  {
+    padding: 0;
+    margin: 0;
+}
+
+.h3_wrapper {
+    width: 10em;
+}
+
+
+.main_content   {
+    margin-top: 10em;
+    margin-left: 1em;
+}
+
+video   {
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    width:100%;
+    z-index: -1;
+
+}
+
+.video_wrapper {
+    height: 80vh;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    display: flex;
+    align-items: left;
+    justify-content: left;
+    flex-direction: column;
+}
+
+form    {
+    margin-top: 2em;
+    margin-left: 1em;
+
+}
+.form_class {
+    margin-top: 1em;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+#email  {
+    border: none;
+    border-bottom: 1px grey solid;
+    width: 80%;
+    margin-right: 2em;
+    color: black;
+
+}
+
+button  {
+    font-family: 'work sans','Laro';
+    font-size: 16px;
+    font-weight: 300;
+    text-transform: uppercase;
+    background-color: black;
+    border-radius: 2px;
     color: white;
-    text-transform: uppercase;
-}
+    padding: 10px 2em;
 
-ul  {
-    text-decoration: none;
-    text-transform: uppercase;
-    list-style: none;
-}
-
-li  {
-    display: inline;
 }
