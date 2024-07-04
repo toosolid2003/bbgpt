@@ -14,22 +14,22 @@ h1  {
     margin: 0;
     padding: 0;
     text-align: left;
-    font-size: 9em;
+    font-size: 10vw;
     text-transform: uppercase;
 }
 
 h2  {
     text-align: right;
     padding-right: 3em;
+    font-size: 2vw;
 }
 
 h3  {
     padding: 0;
     margin: 0;
-}
-
-.h3_wrapper {
-    width: 10em;
+    text-align: left;
+    margin-left: 1em;
+    font-size: 1.4vw;
 }
 
 
@@ -45,7 +45,6 @@ video   {
     object-fit: cover;
     width:100%;
     z-index: -1;
-
 }
 
 .video_wrapper {
@@ -77,7 +76,6 @@ form    {
     width: 80%;
     margin-right: 2em;
     color: black;
-
 }
 
 button  {
@@ -89,5 +87,4 @@ button  {
     border-radius: 2px;
     color: white;
     padding: 10px 2em;
-
 }
