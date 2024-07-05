@@ -26,7 +26,6 @@ def index():
 def submit_email():
     email = request.form['email']
 
-    print(f'logging into DB') 
     conn = sqlite3.connect('emails.db')
     c = conn.cursor()
     try:
@@ -34,7 +33,7 @@ def submit_email():
         conn.commit()
     except sqlite3.IntegrityError:
         # If the email is already in the database, you can handle it here
-        pass
+        print(f'Email {request.form['email']} already in the database')
     conn.close()
     
     return redirect('/')
