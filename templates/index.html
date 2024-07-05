@@ -3,7 +3,7 @@
     <head>
         <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;1,300&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined">
-        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="/staticfiles/style.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -18,7 +18,7 @@
         <section>
             <div class="video_wrapper">
                 <video autoplay muted loop id="background_vid">
-                    <source src="pictures/babycrawling.mp4" type="video/mp4">
+                    <source src="/staticfiles/babycrawling.mp4" type="video/mp4">
                 </video>
                     <h2>BabyGPT</h2>
                 <div class="main_content">
@@ -29,14 +29,11 @@
         </section>
 
 
-        <form>
+        <form action="/submit" method="POST">
             <h3>Join the waitlist and be part of our inner circle</h3>
-            <form>
                 <div class="form_class">
-                    <input type="text" id='email' value="Enter your email"><br>
-                    <button>Notify me</button>
+                    <input type="email" name='email' placeholder="Enter your email" required>
+                    <input type="submit" value="Notify me">
                 </div>
-
-
          </form>
     </body>

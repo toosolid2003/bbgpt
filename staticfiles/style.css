@@ -70,7 +70,7 @@ form    {
     width: 100%;
 }
 
-#email  {
+input[type='email']  {
     border: none;
     border-bottom: 1px grey solid;
     width: 80%;
@@ -78,7 +78,7 @@ form    {
     color: black;
 }
 
-button  {
+input[type='submit']  {
     font-family: 'work sans','Laro';
     font-size: 16px;
     font-weight: 300;
