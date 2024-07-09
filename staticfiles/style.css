@@ -75,6 +75,7 @@ input[type='email']  {
     border-bottom: 1px grey solid;
     width: 80%;
     margin-right: 2em;
+    margin-left: 1.4em;
     color: black;
 }
 
