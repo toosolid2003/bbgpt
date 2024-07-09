@@ -58,19 +58,19 @@ video   {
     flex-direction: column;
 }
 
-form    {
-    margin-top: 2em;
-    margin-left: 1em;
+.cta    {
 
-}
-.form_class {
+    margin-left: 1em;
     margin-top: 1em;
+}
+
+form    {
     display: flex;
     flex-direction: row;
     width: 100%;
 }
 
-input[type='email']  {
+.form-email  {
     border: none;
     border-bottom: 1px grey solid;
     width: 80%;
@@ -79,7 +79,7 @@ input[type='email']  {
     color: black;
 }
 
-input[type='submit']  {
+.form-submit  {
     font-family: 'work sans','Laro';
     font-size: 16px;
     font-weight: 300;

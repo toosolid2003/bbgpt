@@ -1,7 +1,12 @@
-from flask import Flask, render_template, redirect, url_for, request
+from flask import Flask, render_template, redirect, url_for, request, flash
+from flask_wtf.csrf import CSRFProtect
 import sqlite3
+from forms import EmailForm
 
-app = Flask(__name__, template_folder='templates/', static_folder='staticfiles/')
+app = Flask(__name__)
+app.config['SECRET_KEY'] = 'tX4y00j'
+csrf = CSRFProtect(app)
+
 
 # Initialize SQLite database
 def init_db():
@@ -17,26 +22,25 @@ def init_db():
     conn.close()
 
 # Route for the landing page
-@app.route('/')
+@app.route('/', methods=['GET', 'POST'])
 def index():
-    return render_template('index.html')
+    form = EmailForm()
 
-# Route to handle form submission
-@app.route('/submit', methods=['POST'])
-def submit_email():
-    email = request.form['email']
+    if form.validate_on_submit():
+        email = form.email.data
+        conn = sqlite3.connect('emails.db')
+        c = conn.cursor()
+        try:
+            c.execute('INSERT INTO emails (email) VALUES (?)', (email,))
+            conn.commit()
+        except sqlite3.IntegrityError:
+            # If the email is already in the database, you can handle it here
+            flash('This email is already subscribed','danger')
+        conn.close()
+        return redirect(url_for('index'))
 
-    conn = sqlite3.connect('emails.db')
-    c = conn.cursor()
-    try:
-        c.execute('INSERT INTO emails (email) VALUES (?)', (email,))
-        conn.commit()
-    except sqlite3.IntegrityError:
-        # If the email is already in the database, you can handle it here
-        print(f'Email {request.form['email']} already in the database')
-    conn.close()
-    
-    return redirect('/')
+    return render_template('index.html', form=form)
+
 
 if __name__ == '__main__':
     init_db()
