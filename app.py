@@ -33,6 +33,7 @@ def index():
         try:
             c.execute('INSERT INTO emails (email) VALUES (?)', (email,))
             conn.commit()
+            flash('Thanks, you have registered successfully! We\'ll be in touch!')
         except sqlite3.IntegrityError:
             # If the email is already in the database, you can handle it here
             flash('This email is already subscribed','danger')
