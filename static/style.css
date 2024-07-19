@@ -1,13 +1,14 @@
 html    {
+
+}
+
+body    {
+    margin: 0;
     font-family: 'work sans','Lato','Arial','sans-serif';
     box-sizing: border-box;
     font-size: 16px;
     font-weight: 400;
     color: black;
-}
-
-body    {
-    margin: 0;
 }
 
 h1  {
@@ -16,20 +17,25 @@ h1  {
     text-align: left;
     font-size: 10vw;
     text-transform: uppercase;
+    font-family: 'work sans','Lato','Arial','sans-serif';
+    font-weight: 600;
 }
 
 h2  {
     text-align: right;
     padding-right: 3em;
     font-size: 2vw;
+    font-family: 'work sans','Lato','Arial','sans-serif';
+    font-weight: 600;
 }
 
 h3  {
-    padding: 0;
+    padding: 1em 0 0 0;
     margin: 0;
     text-align: left;
     margin-left: 1em;
     font-size: 1.4vw;
+    font-family: 'work sans','Lato','Arial','sans-serif';
 }
 
 
